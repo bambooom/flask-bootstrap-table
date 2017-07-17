@@ -23,10 +23,11 @@ data = [{
   "attention": "20",
   "uneven": "For test"
 }]
+# other column settings -> http://bootstrap-table.wenzhixin.net.cn/documentation/#column-options
 columns = [
   {
-    "field": "name",
-    "title": "name",
+    "field": "name", # which is the field's name of data key 
+    "title": "name", # display as the table header's name
     "sortable": True,
   },
   {
