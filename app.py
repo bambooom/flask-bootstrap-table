@@ -23,13 +23,37 @@ data = [{
   "attention": "20",
   "uneven": "For test"
 }]
-
+columns = [
+  {
+    "field": "name",
+    "title": "name",
+    "sortable": True,
+  },
+  {
+    "field": "commits",
+    "title": "commits",
+    "sortable": True,
+  },
+  {
+    "field": "attention",
+    "title": "attention",
+    "sortable": True,
+  },
+  {
+    "field": "uneven",
+    "title": "uneven",
+    "sortable": True,
+  }
+]
 
 #jdata=json.dumps(data)
 
 @app.route('/')
 def index():
-    return render_template("table.html", data=data)
+    return render_template("table.html",
+      data=data,
+      columns=columns,
+      title='Flask Bootstrap Table')
 
 
 if __name__ == '__main__':
